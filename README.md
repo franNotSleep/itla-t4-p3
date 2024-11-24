@@ -9,7 +9,7 @@ Here are the resources:
 2. [**Jira link**](https://tdtime.atlassian.net/jira/software/projects/IQT/boards/2)  
    Jira
 
-4. [**Documentation**](./test-report.html)  
+4. [**Report**](./test-report.html)  
    HTML
 
 3. [**Demo Video**](https://www.loom.com/share/04811d4387114b08a3bcb7543d07cfca?sid=b9088fbe-aa52-408b-8720-14aef44aaf2a)  
