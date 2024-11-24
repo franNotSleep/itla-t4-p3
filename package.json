@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "selenium-webdriver": "^4.26.0"
+  },
+  "name": "testing-se-fr",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "testRunner.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node testRunner.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
