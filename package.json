@@ -1,14 +1,15 @@
 {
   "dependencies": {
+    "jest": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
     "selenium-webdriver": "^4.26.0"
   },
   "name": "testing-se-fr",
   "type": "module",
   "version": "1.0.0",
   "main": "testRunner.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "node testRunner.js"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
