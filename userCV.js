@@ -1,3 +1,4 @@
+import fs from 'fs/promises';
 import { Builder, Browser, By, Key } from 'selenium-webdriver';
 import { waitTill, SECOND, wrongBehavior, WrongBehavior } from './utils.js'
 
@@ -26,6 +27,9 @@ export class TestUserCV {
     if (got !== expected) {
       throw new Error(`Expected ${expected}. Got ${got}`);
     }
+
+    const image = await this.driver.takeScreenshot();
+    await fs.writeFile('./tests-screenshots/can_see_about.png', image, 'base64');
   }
 
   async #can_see_skills_section() {
@@ -35,6 +39,9 @@ export class TestUserCV {
     if (got !== expected) {
       throw new Error(`Expected ${expected}. Got ${got}`);
     }
+
+    const image = await this.driver.takeScreenshot();
+    await fs.writeFile('./tests-screenshots/can_see_skill.png', image, 'base64');
   }
 
   async #can_see_experiences_section() {
@@ -44,6 +51,9 @@ export class TestUserCV {
     if (got !== expected) {
       throw new Error(`Expected ${expected}. Got ${got}`);
     }
+
+    const image = await this.driver.takeScreenshot();
+    await fs.writeFile('./tests-screenshots/can_see_experiences.png', image, 'base64');
   }
 
   async #can_see_education_section() {
@@ -53,6 +63,9 @@ export class TestUserCV {
     if (got !== expected) {
       throw new Error(`Expected ${expected}. Got ${got}`);
     }
+
+    const image = await this.driver.takeScreenshot();
+    await fs.writeFile('./tests-screenshots/can_see_education.png', image, 'base64');
   }
 
   async #login() {

@@ -1,4 +1,5 @@
 import { Builder, Browser, By, Key } from 'selenium-webdriver';
+import fs from 'fs/promises';
 import { waitTill, SECOND, wrongBehavior, WrongBehavior } from './utils.js'
 
 export class TestUserManagementSystem {
@@ -34,6 +35,8 @@ export class TestUserManagementSystem {
         throw error
       }
 
+      const image = await this.driver.takeScreenshot();
+      await fs.writeFile('./tests-screenshots/cant_signin.png', image, 'base64');
       return;
     }
   }
@@ -48,5 +51,8 @@ export class TestUserManagementSystem {
 
     await waitTill(SECOND * 2);
     await this.driver.findElement(By.xpath('/html/body/div/div/div/main/section[1]/div[1]/div[3]/div[1]/h1')).getText();
+
+    const image = await this.driver.takeScreenshot();
+    await fs.writeFile('./tests-screenshots/can_signin.png', image, 'base64');
   }
 }
